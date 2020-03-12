@@ -1,15 +1,0 @@
-;; Emacs-W3 HTTP cookies file
-;; Automatically generated file!!! DO NOT EDIT!!!
-
-(setq url-cookie-storage
- 'nil)
-(setq url-cookie-secure-storage
- '((".twitch.tv"
-  [url-cookie "unique_id" "Axl1leZKdvr4joJTNZWdI5HGXWaEC5mO" "Sun, 10 Feb 2030 14:45:07 GMT" "/" ".twitch.tv" t]
-  [url-cookie "bucket_id" "97" "Sun, 10 Feb 2030 14:45:33 GMT" "/" ".twitch.tv" t]))
-)
-
-;; Local Variables:
-;; version-control: never
-;; no-byte-compile: t
-;; End:
