@@ -12,7 +12,7 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: xterm-256color
 
-  window:
+window:
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -33,12 +33,12 @@
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-    x: 0
-    y: 0
+    padding:
+      x: 40
+      y: 10
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+    dynamic_padding: true
 
   # Window decorations
   #
@@ -49,9 +49,7 @@
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: transparent 
-  decorations: none 
-  decorations: false 
+    decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -62,14 +60,14 @@
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+    startup_mode: Windowed
 
   # Window title
-  #title: Alacritty
+    title: NUTTING COMPLETE
 
 
 
-  scrolling:
+scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
    history: 20000
@@ -88,7 +86,7 @@
 #tabspaces: 8
 
 #Font configuration
-  font:
+font:
   # Normal (roman) font face
     normal:
     # Font family
@@ -136,7 +134,7 @@
     #style: Bold Italic
 
   # Point size
-    size: 18.0
+    size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -165,7 +163,7 @@
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+    use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -173,33 +171,33 @@
 # Colors (Tomorrow Night Bright)
 # 
 #
-  colors:
+colors:
   # Default colors
-    primary:
-      background: '0x212121'
-      foreground: '0xf1f1f1'
-  
-    # Normal colors
-    normal:
-      black:   '0x282a36'
-      red:     '0xff5c57'
-      green:   '0x5af78e'
-      yellow:  '0xf3f99d'
-      blue:    '0x57c7ff'
-      magenta: '0xff6ac1'
-      cyan:    '0x9aedfe'
-      white:   '0xf1f1f0'
-  
-    # Bright colors
-    bright:
-      black:   '0x686868'
-      red:     '0xff5c57'
-      green:   '0x5af78e'
-      yellow:  '0xf3f99d'
-      blue:    '0x57c7ff'
-      magenta: '0xff6ac1'
-      cyan:    '0x9aedfe'
-      white:   '0xf1f1f0'
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#caa9fa'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
+
+  # Bright colors
+  bright:
+    black:   '#575b70'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
   # Default colors
 
   # Normal colors
@@ -245,9 +243,9 @@
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-  background_opacity: 1.0
+background_opacity: 0.7
 
-  selection:
+selection:
     semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
@@ -255,18 +253,18 @@
 
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
-  cursor:
+cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-   style: Beam
+ style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  #unfocused_hollow: true
+unfocused_hollow: true
 
 # Live config reload (changes require restart)
 #live_config_reload: true
@@ -487,7 +485,7 @@
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
-  key_bindings:
+key_bindings:
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
@@ -503,19 +501,19 @@
 
   # (macOS only)
   #- { key: Key0,   mods: Command,         action: ResetFontSize    }
-   - { key: Equals, mods: Command,         action: IncreaseFontSize }
+ - { key: Equals, mods: Command,         action: IncreaseFontSize }
   #- { key: Add,    mods: Command,         action: IncreaseFontSize }
-   - { key: Minus,  mods: Command,         action: DecreaseFontSize }
-   - { key: K,      mods: Command,         action: ClearHistory     }
+ - { key: Minus,  mods: Command,         action: DecreaseFontSize }
+ - { key: K,      mods: Command,         action: ClearHistory     }
   #- { key: K,      mods: Command,         chars: "\x0c"            }
-   - { key: V,      mods: Command,         action: Paste            }
-   - { key: C,      mods: Command,         action: Copy             }
-   - { key: H,      mods: Command,         action: Hide             }
-   - { key: M,      mods: Command,         action: Minimize         }
-   - { key: Q,      mods: Command,         action: Quit             }
-   - { key: N,      mods: Command,         action: SpawnNewInstance }
-   - { key: W,      mods: Command,         action: Quit             }
-   - { key: F,      mods: Command,         action: ToggleFullscreen }
+ - { key: V,      mods: Command,         action: Paste            }
+ - { key: C,      mods: Command,         action: Copy             }
+ - { key: H,      mods: Command,         action: Hide             }
+ - { key: M,      mods: Command,         action: Minimize         }
+ - { key: Q,      mods: Command,         action: Quit             }
+ - { key: N,      mods: Command,         action: SpawnNewInstance }
+ - { key: W,      mods: Command,         action: Quit             }
+ - { key: F,      mods: Command,         action: ToggleFullscreen }
 
   #- { key: Paste,                    action: Paste                            }
   #- { key: Copy,                     action: Copy                             }

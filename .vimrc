@@ -1,26 +1,20 @@
 " Gotta be first
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tomasr/molokai'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'xolox/vim-misc'
-Plugin 'majutsushi/tagbar'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'sainnhe/gruvbox-material'
-Plugin 'vim-scripts/a.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-call vundle#end()
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'vim-syntastic/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'Raimondi/delimitMate'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'vim-airline/vim-airline'
+Plug 'dracula/vim', { 'as': 'dracula' }
+call plug#end()
 
 filetype plugin indent on
 
@@ -63,8 +57,9 @@ nnoremap ta :tab all<CR>
 
 inoremap jj <ESC>
 
-let g:gruvbox_material_disable_italic_comment = 1
-let g:gruvbox_material_enable_bold = 1
-let g:gruvbox_material_background = 'soft'
-
-colorscheme gruvbox-material
+" let g:gruvbox_material_disable_italic_comment = 1
+" let g:gruvbox_material_enable_bold = 1
+" let g:gruvbox_material_background = 'soft'
+" 
+" colorscheme gruvbox-material
+colorscheme default
