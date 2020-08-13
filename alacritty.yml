@@ -95,7 +95,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-      family: SauceCodePro Nerd Font
+      family: DejaVu Sans Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -134,7 +134,7 @@ font:
     #style: Bold Italic
 
   # Point size
-    size: 16.0
+    size: 8
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -239,11 +239,11 @@ colors:
 #  duration: 0
 #  color: '0xffffff'
 
-# Background opacity
+# Background opacityA
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.7
+background_opacity: 0.8
 
 selection:
     semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -486,34 +486,14 @@ unfocused_hollow: true
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
 key_bindings:
-  # (Windows, Linux, and BSD only)
-  #- { key: V,        mods: Control|Shift, action: Paste            }
-  #- { key: C,        mods: Control|Shift, action: Copy             }
-  #- { key: Insert,   mods: Shift,         action: PasteSelection   }
-  #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-  #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  #- { key: Add,      mods: Control,       action: IncreaseFontSize }
-  #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
-
-  # (Windows only)
-  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
-
-  # (macOS only)
-  #- { key: Key0,   mods: Command,         action: ResetFontSize    }
- - { key: Equals, mods: Command,         action: IncreaseFontSize }
-  #- { key: Add,    mods: Command,         action: IncreaseFontSize }
- - { key: Minus,  mods: Command,         action: DecreaseFontSize }
+ - { key: Equals, mods: Alt,         action: IncreaseFontSize }
+ - { key: Minus,  mods: Alt,         action: DecreaseFontSize }
  - { key: K,      mods: Command,         action: ClearHistory     }
-  #- { key: K,      mods: Command,         chars: "\x0c"            }
- - { key: V,      mods: Command,         action: Paste            }
- - { key: C,      mods: Command,         action: Copy             }
- - { key: H,      mods: Command,         action: Hide             }
- - { key: M,      mods: Command,         action: Minimize         }
- - { key: Q,      mods: Command,         action: Quit             }
- - { key: N,      mods: Command,         action: SpawnNewInstance }
+ - { key: V,      mods: Alt,         action: Paste            }
+ - { key: C,      mods: Alt,         action: Copy             }
+ - { key: N,      mods: Alt,         action: SpawnNewInstance }
  - { key: W,      mods: Command,         action: Quit             }
- - { key: F,      mods: Command,         action: ToggleFullscreen }
+ - { key: F,      mods: Alt,         action: ToggleFullscreen }
 
   #- { key: Paste,                    action: Paste                            }
   #- { key: Copy,                     action: Copy                             }
