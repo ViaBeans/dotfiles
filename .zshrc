@@ -8,21 +8,18 @@ fi
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr:/usr/local:/usr/local/bin:/opt/local/bin:~/.bin:/usr/local/sbin
 
-alias c="clear"
-
-export SPOTIFY_CLIENT_ID=90538f3b9ebc4e078931f8d94ef77622
-export SPOTIFY_SECRET=3551a62f54154fbf97885690544097cb
+export PATH=~/.emacs.d/bin:$PATH
 
 export KEYTIMEOUT=1
 
 source ~/antigen.zsh
 
 antigen use oh-my-zsh
+antigen bundle robbyrussel
 
-antigen bundle git
 antigen bundle tmux
+antigen bundle git
 antigen bundle pip
-
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle mafredri/zsh-async
 antigen theme romkatv/powerlevel10k
@@ -39,6 +36,10 @@ bindkey -v '^?' backward-delete-char
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+HOMEBREW_NO_AUTO_UPDATE=true
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/fr4c741_r3d/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -54,6 +55,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Wasmer
+export WASMER_DIR="/Users/fr4c741_r3d/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
+# Aliases
+alias c="clear"
+alias nv="nvim"

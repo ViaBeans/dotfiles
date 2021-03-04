@@ -26,15 +26,15 @@ window:
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
   #position:
-    x: 0
-    y: 0
+    x: 10
+    y: 10
 
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
     padding:
-      x: 40
+      x: 10
       y: 10
 
   # Spread additional padding evenly around the terminal content.
@@ -65,8 +65,6 @@ window:
   # Window title
     title: NUTTING COMPLETE
 
-
-
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -95,7 +93,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-      family: DejaVu Sans Mono
+      family: MesloLGS NF
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -134,7 +132,7 @@ font:
     #style: Bold Italic
 
   # Point size
-    size: 8
+    size: 15
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -243,7 +241,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+background_opacity: 0.9
 
 selection:
     semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
