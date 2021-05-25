@@ -5,10 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$HOME/.cargo/env:$HOME/bin:/usr/local/bin:$PATH:/usr:/usr/local:/usr/local/bin:/opt/local/bin:~/.bin:/usr/local/sbin
-export PATH=/Users/fr4c741_r3d/CS348/mongodb-macos-x86_64-4.4.5/bin:$PATH
-export PATH=~/.emacs.d/bin:$PATH
-
 export KEYTIMEOUT=1
 
 source ~/antigen.zsh
@@ -39,28 +35,6 @@ bindkey -v '^?' backward-delete-char
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 HOMEBREW_NO_AUTO_UPDATE=true
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/fr4c741_r3d/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/fr4c741_r3d/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/fr4c741_r3d/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/fr4c741_r3d/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Wasmer
-export WASMER_DIR="/Users/fr4c741_r3d/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
-
 # Aliases
 alias c="clear"
-alias nv="nvim"
-alias md="mongod --dbpath ~/db"
-zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 alias matrix="cmatrix -absC magenta"
