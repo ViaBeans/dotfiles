@@ -3,6 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
+Plug 'hdima/python-syntax'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -63,11 +64,9 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <Up> <C-Y>
 nnoremap <Down> <C-E>
 
-nnoremap th :tabprev<CR>
-nnoremap tl :tabnext<CR>
-nnoremap tn :tabnew<CR>
-nnoremap tc :tabclose<CR>
-nnoremap ta :tab all<CR>
+nnoremap <C-Left> :tabprev<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-Down> :tab all<CR>
 
 inoremap jj <ESC>
 

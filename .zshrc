@@ -5,9 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr:/usr/local:/usr/local/bin:/opt/local/bin:~/.bin:/usr/local/sbin
-
+export PATH=$HOME/.cargo/env:$HOME/bin:/usr/local/bin:$PATH:/usr:/usr/local:/usr/local/bin:/opt/local/bin:~/.bin:/usr/local/sbin
+export PATH=/Users/fr4c741_r3d/CS348/mongodb-macos-x86_64-4.4.5/bin:$PATH
 export PATH=~/.emacs.d/bin:$PATH
 
 export KEYTIMEOUT=1
@@ -62,3 +61,6 @@ export WASMER_DIR="/Users/fr4c741_r3d/.wasmer"
 # Aliases
 alias c="clear"
 alias nv="nvim"
+alias md="mongod --dbpath ~/db"
+zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+alias matrix="cmatrix -absC magenta"
